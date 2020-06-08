@@ -1,0 +1,26 @@
+.jumbotron{
+    margin-top: 20px;
+    background-image: url(https://www.asc-csa.gc.ca/images/astronomie/mars/banner-mars.jpg);
+    background-size: cover;
+    color: beige;
+}
+
+
+.row {
+
+    color: beige;
+
+}
+
+.btn {
+
+    background-color: rgb(138, 58, 13);
+    color: beige;
+
+}
+
+.card {
+
+    outline: beige;
+
+}

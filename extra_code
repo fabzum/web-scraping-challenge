@@ -1,0 +1,16 @@
+    <div class="row text-center">
+        <h2>Mars Hemispheres</h2>
+        <hr>
+        <!-- <div class="col-md-6">
+            <img src="#" class="img" />
+             <h3>{{ data.facts_table}}</h3> 
+            <img src="#" class="img" />
+             <h3>{{data.facts_table }}</h3> 
+        </div>
+        <div class="col-md-6">
+            <img src="#" class="img" />
+             <h3>{{ }}</h3>
+            <img src="#" class="img" />
+             <h3>{{ }}</h3>
+        </div> -->
+    </div>

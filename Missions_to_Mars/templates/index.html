@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/stylesheet.css">
+</head>
+
+<body style="background-color:black">
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-warning btn-lg" href="/scrape" role="button">Get Data</a></p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Latest Mars News</h2>
+            <h3>{{ data.news_title }}</h3>
+            <p>{{ data.news_p }} </p> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Featured Mars Image</h2>
+            <img src="{{data.featured_image_url}}" class="img" height="350" width="450" />
+        </div>
+
+        <div class="col-md-6">
+          <div class="card" style="outline:beige;">
+            <div class="card-body">
+              <h2 class="card-title">Current Weather on Mars</h2>
+              <p class="card-text">{{ data.mars_weather }}  </p>
+            </div>
+          </div>
+          <div class= "table">
+            <h2 class="table-title">Mars Facts</h2>
+            <p class="table-content">{{ data.facts_table | safe }}  </p>
+          </div>
+        </div>
+    </div>
+    <br> 
+    <br> 
+    <br>
+    <br> 
+    <br> 
+    <br>
+    <div class="row mt-5 text-center">
+      <h2>Mars Hemispheres</h2>
+      <hr>
+      {% for hemispheres in data.hemisphere_image_urls %}
+        <div class="card col-md-6 col-sm-12 mt-3">
+            <img src="{{ hemispheres.img_url }}" class="card-img-top" height="350" width="400">
+            <div class ="card-body">
+            <h3> {{ hemispheres.title }} </h3>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br> 
+  <br> 
+  <br>
+  <footer class="footer mt-1 py-3">
+    <div class="container text-center">
+      <span class="mb-0"> Copyright © Fabienne Zumbühl</span>
+    </div>
+  </footer>
+</body>
+
+</html>
